@@ -1,22 +1,25 @@
 var React = require('react');
+
+var headerStyle = {
+  fontSize: '16px',
+  fontWeight: '300',
+  display: 'inline-block',
+  margin: '20px 10px'
+};
+
 var Header = React.createClass({
-  
-  getInitialState: function () {
+
+  getDefaultProps: function () {
     return {
-      text: null
+      text: 'Default header'
     };
   },
 
-  componentDidMount: function () {
-    text: ""
-  },
-
   render: function () {
-    var tweet = this.state.tweet;
     return (
-      <h1>{this.props.text}</h1>
-    ); 
-  }
+      <h2 style={headerStyle}>{this.props.text}</h2>
+    );
+  } 
 });
 
 module.exports = Header;
